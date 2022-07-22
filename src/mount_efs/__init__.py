@@ -1304,7 +1304,7 @@ def get_init_system(comm_file="/proc/1/comm"):
             logging.warning("Unable to read %s", comm_file)
 
         # OpenRC init system manages services a little differently
-        if init_system == "init" and os.path.isfile("/sbin/openrc"):
+        if init_system == "mc" and os.path.isfile("/sbin/openrc"):
             init_system = "openrc-init"
             logging.debug("Detected OpenRC init system")
     else:
